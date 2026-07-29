@@ -54,7 +54,7 @@ export default function ContactForm() {
           className="mb-10"
         />
 
-        <form onSubmit={handleSubmit} noValidate className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid gap-6 sm:grid-cols-2">
             <div>
               <label htmlFor="name" className={labelClass}>
