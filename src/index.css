@@ -121,8 +121,8 @@ body {
 }
 
 /* Highlighter-style mark: grows in from the left, like a marker pen
-   dragged across the risky phrase. Triggered by .is-active (scroll /
-   click) or focus/hover on interactive marks. */
+   dragged across the risky phrase. Triggered by .is-active (scroll
+   reveal, or always-on for interactive marks). */
 .mark-sweep {
   background-color: transparent;
   background-image: linear-gradient(
@@ -134,9 +134,7 @@ body {
   transition: background-size 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   border-radius: 1px;
 }
-.mark-sweep.is-active,
-button.mark-sweep:hover,
-button.mark-sweep:focus-visible {
+.mark-sweep.is-active {
   background-size: 100% 100%;
 }
 
