@@ -1,16 +1,39 @@
-# React + Vite
+# Aside
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Landing page for **Aside**, a concept AI tool that reads freelance contracts and flags the clauses that quietly cost solo freelancers money: one-sided penalties, IP grabs, slow payment terms, asymmetric termination.
 
-Currently, two official plugins are available:
+**Live:** https://aside-igorworks.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> This is a design case study, not a working product. There is no contract-analysis backend behind it; the site says so in its own footer note.
 
-## React Compiler
+![Aside landing page](docs/cover.jpg)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Idea
 
-## Expanding the Oxlint configuration
+A product about reading contracts closely shouldn't be pitched with a generic SaaS feature grid. The whole site borrows the look of an annotated document: a content column with a narrow margin of tilted notes in the AI's voice, and highlighter marks that sweep across risky phrases.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## What's on the page
+
+- **Interactive clause demo.** Hovering or tabbing through a real contract clause swaps in the matching margin note and risk tag.
+- **Four clause categories** with risk levels: penalties, IP ownership, payment timing, termination and kill fees.
+- **Philosophy section** on where an AI review tool should stop and a human should take over.
+- **Contact form** with required-field validation and file upload (front end only).
+
+![How it works](docs/how-it-works.jpg)
+
+## Accessibility
+
+Every interactive mark is a real focusable button with `aria-pressed` state, not a hover-only effect. Reveal animations and highlights respect `prefers-reduced-motion`, and the whole page works from the keyboard.
+
+## Stack
+
+React 19, Vite, Tailwind CSS 4, deployed on Vercel. Section scaffolding and first-pass copy were drafted with an AI coding agent; layout, interactions and accessibility were finished by hand.
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Part of my portfolio: https://madebyigor.vercel.app
